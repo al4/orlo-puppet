@@ -2,7 +2,7 @@ class orlo::config(
   $config_hash = $::orlo::config_hash,
   $config_path = $::orlo::config_path,
 ){
-  info("foo: ${config_hash}")
+
   $config_default = {
     'main' => {
       'propagate_exceptions' => 'true',

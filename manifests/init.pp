@@ -35,10 +35,10 @@
 #
 class orlo (
   Hash[String,Hash] $config_hash    = {},
-  String            $config_path    = $::orlo::params::config_path,
+  String            $config_path    = "/etc/orlo/orlo.ini",
   Boolean           $manage_package = false,
   Boolean           $manage_service = false,
-) inherits orlo::params {
+) {
 
   if $manage_package {
     include orlo::install

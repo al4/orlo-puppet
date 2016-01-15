@@ -1,6 +1,7 @@
 class orlo::service(
   $ensure = running,
 ){
+
   service{ 'orlo':
     ensure   => $ensure,
   }

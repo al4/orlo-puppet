@@ -3,7 +3,6 @@ require 'spec_helper'
 describe 'orlo' do
   context 'with defaults for all parameters' do
     it { should contain_class('orlo') }
-    it { should contain_class('orlo::params') }
   end
 
   context 'with manage_package => true' do

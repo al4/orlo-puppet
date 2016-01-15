@@ -1,0 +1,15 @@
+{
+  "name": "ecg-orlo",
+  "version": "0.0.1",
+  "author": "ebayClassifiedsGroup",
+  "summary": "Install and configure Orlo",
+  "license": "MIT",
+  "source": "https://github.com/eBayClassifiedsGroup/orlo-puppet",
+  "project_page": "https://github.com/eBayClassifiedsGroup/orlo-puppet",
+  "issues_url": "https://github.com/eBayClassifiedsGroup/orlo-puppet/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
+    {"name":"puppetlabs-inifile","version_requirement":">= 1.4.0"}
+  ]
+}
+

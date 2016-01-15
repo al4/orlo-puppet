@@ -1,11 +1,28 @@
-class orlo::config (
-  $config = $::orlo::config,
+class orlo::config(
+  $config_hash = $::orlo::config_hash,
   $config_path = $::orlo::config_path,
 ){
+  info("foo: ${config_hash}")
+  $config_default = {
+    'main' => {
+      'propagate_exceptions' => 'true',
+      'time_format' => '%Y-%m-%dT%H:%M:%SZ',
+      'time_zone' => 'UTC',
+    },
+    'db'    => {
+      'uri' => 'sqlite://',
+    },
+    'logging' => {
+      'debug' => 'false',
+      'file'  => '/var/log/orlo/app.log',
+    }
+  }
 
-  validate_hash($config)
-  $defaults = { 'path' => $config_path }
-  create_ini_settings($config, $defaults)
+  validate_hash($config_hash)
+  $orlo_config = merge($config_default, $config_hash)
+
+  $defaults = { 'path' => $::orlo::config_path }
+  create_ini_settings($orlo_config, $defaults)
 
 }
 

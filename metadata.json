@@ -1,5 +1,6 @@
 {
   "name": "ecg-orlo",
+  "data_provider": "hiera",
   "version": "0.0.1",
   "author": "ebayClassifiedsGroup",
   "summary": "Install and configure Orlo",

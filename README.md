@@ -14,9 +14,10 @@ A Pupppet module to install and configure Orlo.
 
 ## Module Description
 
-This is fairly basic at present. It has only been tested on Debian, and assumes
-that the .deb is in a repo that is already in your sources (as Orlo currently
-does not host a Debian repository, you will need to add it to your own).
+This module is ver basic at present. It has only been tested on Debian, and
+assumes that the .deb is in a repo that is already in your sources (as Orlo
+currently does not host a Debian repository, you will need to add it to your
+own).
 
 Does not configure the database, as that would be prescriptive, both in terms
 of the database you use and how it is installed.
@@ -34,6 +35,7 @@ class { 'orlo':
 
 You will probably want to define the configuration, which is a simple hash fed 
 to the puppetlabs inifile module.
+
 You can also set orlo::config in hiera, see puppetlabs-inifile for more info.
 
 If you have installed via pip, you will want to set manage_package and 

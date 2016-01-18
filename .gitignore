@@ -16,3 +16,5 @@ tags
 
 # Spec fixtures
 spec/fixtures/*
+
+Gemfile.lock
